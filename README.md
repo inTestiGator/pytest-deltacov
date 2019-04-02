@@ -3,9 +3,9 @@
 
 Deltacov is a plugin for [pytest](https://github.com/pytest-dev) that displays
 the changes in code coverage between test suite executions in a graph. Developed using Python,
-`deltacov` indicate changes in the code that can assist the user in achieving maximum
-code coverage if code coverage decreases from one execution of the test suite or `deltacov` to another.
-Deltacov makes use of the cove plugin by running the command; `pipenv run pytest -x -s --cov-config pytest.cov --cov-report term-missing --cov`
+`deltacov` indicates changes in the code that can assist the user in achieving maximum
+code coverage if coverage decreases from one execution of the test suite or `deltacov` to another.
+Deltacov makes use of the [cov plugin](https://pypi.org/project/pytest-cov/) by running the command; `pipenv run pytest -x -s --cov-config pytest.cov --cov-report term-missing --cov`
 to retrieve the code coverage. It also runs the command; `date +"%d-%m-%y"` to retrieve the time and date of when
 the test was ran. Although the user can see these commands executed in the terminal, it is necessary
 in order to capture the information needed to produce the graph. This is accomplished through the
