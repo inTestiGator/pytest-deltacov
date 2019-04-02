@@ -8,9 +8,10 @@ code coverage if code coverage decreases from one execution of the test suite or
 Deltacov makes use of the cove plugin by running the command; `pipenv run pytest -x -s --cov-config pytest.cov --cov-report term-missing --cov`
 to retrieve the code coverage. It also runs the command; `date +"%d-%m-%y"` to retrieve the time and date of when
 the test was ran. Although the user can see these commands executed in the terminal, it is necessary
-in order to capture the necessary information to produce the graph. This is accomplished through the
+in order to capture the information needed to produce the graph. This is accomplished through the
 use of the `script` command which saves the information to a file called `output.txt`. Due to potential
-issues while graphing, `deltacov` only shows the ten most recent test execution reports.
+issues while graphing, `deltacov` only shows the ten most recent test execution reports, regardless of
+the time or date.
 
 ## Usage of Deltacov:
 
