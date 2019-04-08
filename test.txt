@@ -1,0 +1,13 @@
+Script started on 2019-04-02 15:45:42-0400
+]0;everitta@aldenv168: ~/cs203s2019/group work/pytest-deltacoveveritta@aldenv168:~/cs203s2019/group work/pytest-deltacov$ -help
+
+Command '-help' not found, did you mean:
+
+  command 'dhelp' from deb dhelp
+
+Try: apt install <deb name>
+
+]0;everitta@aldenv168: ~/cs203s2019/group work/pytest-deltacoveveritta@aldenv168:~/cs203s2019/group work/pytest-deltacov$ exit
+exit
+
+Script done on 2019-04-02 15:45:53-0400
