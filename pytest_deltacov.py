@@ -11,11 +11,11 @@ import pytest
 def pytest_addoption(parser):
     group = parser.getgroup('deltacov')
     group.addoption(
-        '--foo',
+        '--delta',
         action='store',
         dest='dest_foo',
         default='2019',
-        help='Set the value for the fixture "bar".'
+        help='Display a graph of code coverage over time (previous ten runs)'
     )
 
     parser.addini('HELLO', 'Dummy pytest.ini setting')
