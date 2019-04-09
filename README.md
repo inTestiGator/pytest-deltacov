@@ -22,13 +22,13 @@ the time or date.
 
 ## Usage of Deltacov:
 
-Deltacov has been configured to work with `Python 3.7.2`. Please ensure that the local version
-of Python 3 has been installed by using the command `python3 --version`. If the terminal does not
-display the correct version of Python, please update.
+To run the plugin, use the command `pipenv run pytest --delta`.
 
 ## Requirements
-  Include what prerequisites the user will need such as the versions of pytest
-  and python
+
+Deltacov has been configured to work with `Python 3.7.2`. Please ensure that the local version
+of Python 3 has been installed by using the command `python3 --version`. If the terminal does not
+display the correct version of Python, please update. 
 
 ## Installation
   Include how to install the plugin in this section
