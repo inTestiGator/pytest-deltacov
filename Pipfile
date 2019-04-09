@@ -7,6 +7,10 @@ verify_ssl = true
 requests = "*"
 pytest = "*"
 pytest-cov = "*"
+black = "*"
+flake8 = "*"
+pylint = "*"
+codecov = "*"
 
 [packages]
 
