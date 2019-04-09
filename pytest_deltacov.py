@@ -9,6 +9,7 @@ import pytest
 import argparse
 
 def pytest_addoption(parser):
+    """Filler docstring, UPDATEME"""
     group = parser.getgroup('deltacov')
     group.addoption(
         '--delta',
@@ -19,13 +20,17 @@ def pytest_addoption(parser):
 
 @pytest.fixture
 def bar(request):
+    """Filler docstring, UPDATEME"""
     return request.config.option.dest_foo
 
+ 
 def format_csv_file():
     """Retrieves coverage data and organizes it into a CSV file"""
 
+
 def graphing_data():
     """Uses CSV file to create graph of code coverage"""
+
 
 def notify_user():
     """Shows user what code changes decreased coverage"""
