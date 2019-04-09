@@ -25,11 +25,8 @@ def pytest_addoption(parser):
 def bar(request):
     return request.config.option.dest_foo
 
-def retrieve_coverage():
-    """Runs test suite for coverage data"""
-
 def format_csv_file():
-    """Organizes collected data into a CSV file"""
+    """Retrieves coverage data and organizes it into a CSV file"""
 
 def graphing_data():
     """Uses CSV file to create graph of code coverage"""
