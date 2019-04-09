@@ -10,6 +10,7 @@ pytest-cov = "*"
 black = "*"
 flake8 = "*"
 pylint = "*"
+codecov = "*"
 
 [packages]
 
