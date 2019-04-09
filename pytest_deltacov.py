@@ -6,20 +6,16 @@ result in decreased coverage
 # -*- coding: utf-8 -*-
 
 import pytest
-
+import argparse
 
 def pytest_addoption(parser):
     group = parser.getgroup('deltacov')
     group.addoption(
         '--delta',
         action='store',
-        dest='dest_foo',
-        default='2019',
-        help='Display a graph of code coverage over time (previous ten runs)'
+        help='pytest-deltacov help:\n\
+         --delta : Display a graph of code coverage over time (previous ten runs)'
     )
-
-    parser.addini('HELLO', 'Dummy pytest.ini setting')
-
 
 @pytest.fixture
 def bar(request):
