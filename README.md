@@ -35,7 +35,6 @@ If the terminal does not display the correct version of Python, please update.
   Include what prerequisites the user will need such as the versions of pytest
   and python
 
-
 ## Installation
 
   Include how to install the plugin in this section
