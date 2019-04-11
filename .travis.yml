@@ -16,7 +16,7 @@ env:
     - PIPENV_IGNORE_VIRTUALENVS=1
     - LANG=en_US.UTF-8
     - LC_ALL=en_US.UTF-8
-    - secure:
+    - secure: 6804f78c-9694-4f93-bc0e-b31f219934c0
 
 # install mdl for checking Markdown
 before_install:
