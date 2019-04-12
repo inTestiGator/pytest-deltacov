@@ -7,10 +7,24 @@ result in decreased coverage
 
 import pytest
 import argparse
+import pkg_resources
+from pkg_resources import DistributionNotFound, VersionConflict
+
+__version__= '1.0.0'
+
+dependencies = [
+    'pytest-cov>=2.6.0'
+]
+
+# pytest-cov
+try:
+    pkg_resources.require(dependencies)
+except DistributionNotFound:
+    print("pytest-deltacov requires the package pytest-cov")
 
 def pytest_addoption(parser):
-    """Filler docstring, UPDATEME"""
-    group = parser.getgroup('deltacov')
+    """Collect coverage delta with --delta flag"""
+    group = parser.getgroup('deltacov', 'Coverage deltas')
     group.addoption(
         '--delta',
         action='store',
@@ -18,12 +32,20 @@ def pytest_addoption(parser):
          --delta : Display a graph of code coverage over time (previous ten runs)'
     )
 
+coverage = config.pluginmanager.get_plugin("pytest-cov")
+
+def parse_output():
+    """Find and collect current coverage from terminal output"""
+
+def pytest_report_header(config):
+    return "Using --delta coverage report"
+
 @pytest.fixture
 def bar(request):
     """Filler docstring, UPDATEME"""
     return request.config.option.dest_foo
 
- 
+
 def format_csv_file():
     """Retrieves coverage data and organizes it into a CSV file"""
 
