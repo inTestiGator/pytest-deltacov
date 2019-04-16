@@ -14,7 +14,7 @@ def test_bar_fixture(testdir):
     )
 
     # run pytest with the following cmd args
-    result = testdir.runpytest("--foo=europython2015", "-v")
+    result = testdir.runpytest("--delta", "-v")
 
     # fnmatch_lines does an assertion internally
     result.stdout.fnmatch_lines(["*::test_sth PASSED*"])
