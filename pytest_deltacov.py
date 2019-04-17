@@ -3,13 +3,12 @@
 Visually displays changes in code coverage in a graph and indicates changes that
 result in decreased coverage
 """
-# -*- coding: utf-8 -*-
 
 import pytest
 import argparse
 
 def pytest_addoption(parser):
-    """Filler docstring, UPDATEME"""
+    """ Creates the command line argument for teh deltacov plugin """
     group = parser.getgroup('deltacov')
     group.addoption(
         '--delta',
@@ -23,7 +22,7 @@ def bar(request):
     """Filler docstring, UPDATEME"""
     return request.config.option.dest_foo
 
- 
+
 def format_csv_file():
     """Retrieves coverage data and organizes it into a CSV file"""
 
