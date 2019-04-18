@@ -8,7 +8,7 @@ import pytest
 import argparse
 
 def pytest_addoption(parser):
-    """ Creates the command line argument for teh deltacov plugin """
+    """ Creates the command line argument for the deltacov plugin """
     group = parser.getgroup('deltacov')
     group.addoption(
         '--delta',
