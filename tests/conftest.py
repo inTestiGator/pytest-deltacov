@@ -7,7 +7,6 @@ import subprocess
 import xml.dom
 from xml.dom import minidom
 from pkg_resources import DistributionNotFound, VersionConflict
-import pytest_deltacov
 
 __version__= '1.0.0'
 
