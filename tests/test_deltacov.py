@@ -1,4 +1,4 @@
-"""Filler docstring, UPDATEME"""
+"""Contains the test cases for deltacov.py"""
 # -*- coding: utf-8 -*-
 
 
