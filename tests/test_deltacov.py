@@ -2,14 +2,14 @@
 # -*- coding: utf-8 -*-
 
 
-def test_bar_fixture(testdir):
-    """Make sure that pytest accepts our fixture."""
+def test_command_addoption_fixture(testdir):
+    """Make sure that pytest accepts the --delta command."""
 
     # create a temporary pytest test module
     testdir.makepyfile(
         """
-        def test_sth(bar):
-            assert bar == "europython2015"
+        def test_01():
+            assert bar == True
     """
     )
 
@@ -17,7 +17,7 @@ def test_bar_fixture(testdir):
     result = testdir.runpytest("--delta", "-v")
 
     # fnmatch_lines does an assertion internally
-    result.stdout.fnmatch_lines(["*::test_sth PASSED*"])
+    result.stdout.fnmatch_lines(["Using --delta coverage report"])
 
     # make sure that that we get a '0' exit code for the testsuite
     assert result.ret == 0
@@ -54,7 +54,7 @@ def test_hello_ini_setting(testdir):
     """
     )
 
-    result = testdir.runpytest("-v")
+    result = testdir.runpytest("--delta", "-v")
 
     # fnmatch_lines does an assertion internally
     result.stdout.fnmatch_lines(["*::test_hello_world PASSED*"])

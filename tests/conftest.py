@@ -7,6 +7,7 @@ import subprocess
 import xml.dom
 from xml.dom import minidom
 from pkg_resources import DistributionNotFound, VersionConflict
+import pytest_deltacov
 
 __version__= '1.0.0'
 
@@ -48,8 +49,9 @@ def parse_xml_for_coverage():
             line_number = line.attributes['number'].value
             #these are the uncovered lines
         else:
-            #lines are covered
+            print("100% coverage")
 
 def pytest_report_header(config):
     """ Prints to the header """
-    return "Using --delta coverage report"
+    str = "Using --delta coverage report"
+    return str
