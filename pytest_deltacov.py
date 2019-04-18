@@ -9,6 +9,7 @@ import pytest
 import argparse
 import pkg_resources
 from pkg_resources import DistributionNotFound, VersionConflict
+from pytest import Collector
 
 __version__= '1.0.0'
 
@@ -32,7 +33,6 @@ def pytest_addoption(parser):
         help='pytest-deltacov help:\n\
          --delta : Display a graph of code coverage over time (previous ten runs)'
     )
-
 
 def run_subprocess():
     """ Runs a subprocess to create the xml file """

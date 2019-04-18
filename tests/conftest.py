@@ -29,6 +29,7 @@ def pytest_addoption(parser):
     group.addoption(
         '--delta',
         action='store',
+        default = True
         help='pytest-deltacov help:\n\
          --delta : Display a graph of code coverage over time (previous ten runs)'
     )
