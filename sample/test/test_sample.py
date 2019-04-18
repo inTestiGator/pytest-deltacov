@@ -1,6 +1,6 @@
 """Tests for sample.py"""
 
-from src import sample
+import sample
 
 def test_addition():
     assert sample.addition(9,10) != 21
