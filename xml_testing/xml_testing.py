@@ -11,12 +11,21 @@ def file_formatter(path_to_file):
 
 
 def xml_parser(soup):
-    line_rate = soup.find(attrs={'coverage':"line-rate"})
-    print(line_rate)
+    lr = soup.find('coverage')
+    line_rate = lr.get("line-rate")
 
-    #for each file covered:
-        # store lines covered in one list
-        # store lines not covered in other
+    for file in soup.find_all('class'):
+        lines_covered = []
+        lines_uncovered = []
+
+        filename = file.get("filename")
+
+        for lines in file.find_all('lines'):
+            for line in lines.find_all('line'):
+                if line.get("hits") == "1":
+                    lines_covered.append(line.get("number"))
+                else:
+                    lines_uncovered.append(line.get("number"))
 
 
 def main():
