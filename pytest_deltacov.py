@@ -32,4 +32,6 @@ def graphing_data():
 
 
 def notify_user():
+    #intakes xml file and delta
     """Shows user what code changes decreased coverage"""
+    #if delta is negative:
