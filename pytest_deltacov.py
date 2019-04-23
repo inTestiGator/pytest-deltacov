@@ -77,6 +77,15 @@ def graphing_data():
 
 
 def notify_user():
-    #intakes xml file and delta
+    #intakes line files and delta
     """Shows user what code changes decreased coverage"""
     #if delta is negative:
+        #for each previous line covered in previous run
+            #parse through most recent uncovered lines
+            #if match is found:
+                #add line to list
+                #move to next previously covered line
+            #else:
+                #move to next previously covered line
+    #else:
+        #break()
