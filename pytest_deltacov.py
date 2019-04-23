@@ -53,13 +53,13 @@ def run_subprocess():
 #             #lines are covered
 
 @pytest.fixture
-def get_cache(request):
+def empty_cache(request):
     """Checks cache for covered and uncovered lines"""
     cov = request.config.cache.get("output/covered", None)
     uncov = request.config.cache.get("output/uncovered", None)
     if cov and uncov = None:
         print("First test execution")
-    return cov, uncov
+    return 1
 
 
 def set_cache(cov_list, uncov_list):
