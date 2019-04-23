@@ -1,4 +1,4 @@
-"""Filler docstring, UPDATEME"""
+"""This file is used to deploy the plugin"""
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -8,7 +8,7 @@ from setuptools import setup
 
 
 def read(fname):
-    """Filler docstring, UPDATEME"""
+    """This function takes in a filepath and reads the file"""
     file_path = os.path.join(os.path.dirname(__file__), fname)
     return codecs.open(file_path, encoding='utf-8').read()
 
