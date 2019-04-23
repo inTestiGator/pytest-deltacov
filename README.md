@@ -9,8 +9,7 @@
 ## Overview of Features
 
 Deltacov is a plugin for [pytest](https://github.com/pytest-dev) that displays
-
-the changes in code coverage between test suite executions in a graph. Developed
+the changes in code coverage between test suite executions in a line graph. Developed
 using Python, `deltacov` indicates changes in the code that can assist the user
 in achieving maximum code coverage if coverage decreases from one execution of
 the test suite or `deltacov` to another. Deltacov makes use of
@@ -24,22 +23,19 @@ the `script` command which saves the information to a file called `output.txt`.
 Due to potential issues while graphing, `deltacov` only shows the ten most recent
 test execution reports, regardless of the time or date.
 
-## Usage of Deltacov
+## Requirements
 
 Deltacov has been configured to work with `Python 3.7.2`. Please ensure that the
 local version of Python 3 has been installed by using the command `python3 --version`.
-If the terminal does not display the correct version of Python, please update.
-
-## Requirements
-
-  Include what prerequisites the user will need such as the versions of pytest
-  and python
+If the terminal does not display the correct version of Python, please update. Details
+on upgrading and installing Python can be found [here](https://www.python.org/downloads/)
 
 ## Installation
 
-  Include how to install the plugin in this section
+Include how to install the plugin in this section
 
 ## Example Output
 
-  It may serve useful to have a picture of what the output should look like,
-  so users know if they are running the plugin correctly.
+It may serve useful to have a picture of what the output should look like,
+so users know if they are running the plugin correctly.
+(Insert a screenshot once plugin is functioning)
