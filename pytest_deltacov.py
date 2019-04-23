@@ -76,8 +76,7 @@ def graphing_data():
     """Uses CSV file to create graph of code coverage"""
 
 
-def notify_user():
-    #intakes line files and delta
+def notify_user(delta, cov_list, uncov_list):
     """Shows user what code changes decreased coverage"""
     #if delta is negative:
         #for each previous line covered in previous run
