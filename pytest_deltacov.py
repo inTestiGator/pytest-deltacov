@@ -3,7 +3,6 @@
 Visually displays changes in code coverage in a graph and indicates changes that
 result in decreased coverage
 """
-# -*- coding: utf-8 -*-
 
 import pytest
 import argparse
@@ -72,10 +71,6 @@ def set_cache(cov_list, uncov_list):
 
 def pytest_report_header(config):
     return "Using --delta coverage report"
-
-
-def format_csv_file():
-    """Retrieves coverage data and organizes it into a CSV file"""
 
 
 def graphing_data():

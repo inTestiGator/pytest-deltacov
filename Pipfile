@@ -13,6 +13,11 @@ pylint = "*"
 codecov = "*"
 
 [packages]
+pytest-cov = "*"
+black = "*"
 
 [requires]
 python_version = "3.6"
+
+[pipenv]
+allow_prereleases = true
