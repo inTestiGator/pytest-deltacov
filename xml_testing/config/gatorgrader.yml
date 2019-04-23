@@ -1,0 +1,33 @@
+---
+name: cmpsc-203-spring-2019-practical4
+break: true
+indent: 4
+---
+# --> check the source code for various characteristics
+# note that without an "--exact" the check is an "at least"
+termfrequency:
+        compute_tf_cookbook.py:
+            --single 12 --language Python
+            --fragment "TODO" --count 0 --exact
+tests:
+        test_compute_tf_cookbook.py:
+            --fragment "from termfrequency import compute_tf_cookbook" --count 1
+            --fragment "test_" --count 5
+            --fragment "TODO" --count 0 --exact
+# --> check the technical writing
+# mdl is a Markdown linting tool
+# proselint checks writing for common mistakes
+writing/reflection.md:
+    mdl
+    proselint
+    --fragment "```" --count 4
+    --paragraphs 5 --exact
+    --words 100
+# --> check the number of commits beyond a threshold
+--commits 28
+# --> check that the program executes and produces 4 lines of output
+--command "pipenv run python3 termfrequency/compute_tf_cookbook.py inputs/input.txt" --executes
+--command "pipenv run python3 termfrequency/compute_tf_cookbook.py inputs/input.txt" --count 8 --exact
+# --> check that the test suite executes and does not fail
+--command "pipenv run pytest" --executes
+--command "pipenv run pytest -x -s --cov-config pytest.cov --cov-report term-missing --cov" --executes
