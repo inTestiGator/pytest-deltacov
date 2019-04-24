@@ -16,17 +16,18 @@ def simpletestdir(testdir):
 
 def test_it_reports_a_header_when_not_set(simpletestdir):
     out = simpletestdir.runpytest()
-    assert len([
-        x for x in out.outlines if x.startswith('Using --delta coverage report')
-        ]) == 1
+    assert (
+        len([x for x in out.outlines if x.startswith("Using --delta coverage report")])
+        == 1
+    )
 
 
 def test_it_reports_a_header_when_set(simpletestdir):
-    out = simpletestdir.runpytest('--delta')
-    lines = [x for x in out.outlines if x.startswith('Using --delta coverage report')]
-    assert lines == [
-        'Using --delta coverage report'
-    ]
+    out = simpletestdir.runpytest("--delta")
+    lines = [x for x in out.outlines if x.startswith("Using --delta coverage report")]
+    assert lines == ["Using --delta coverage report"]
+
+
 # def test_command_addoption_fixture(testdir):
 #     """Make sure that pytest accepts the --delta command."""
 #
