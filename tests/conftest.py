@@ -63,6 +63,7 @@ def simpletestdir(testdir):
     )
     yield testdir
 
+
 @pytest.fixture
 def empty_cache(request):
     """Checks cache for covered and uncovered lines"""
