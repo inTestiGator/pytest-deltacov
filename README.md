@@ -2,6 +2,7 @@
 
 ![logo](.github/Logo.png "pytest-deltacov")
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/deaa8e29dd3a45cd96f40b94f7d1e801)](https://app.codacy.com/app/ALEXANDERB82/pytest-deltacov?utm_source=github.com&utm_medium=referral&utm_content=inTestiGator/pytest-deltacov&utm_campaign=Badge_Grade_Dashboard)
 [![Build Status](https://api.travis-ci.com/inTestiGator/pytest-deltacov.svg?branch=master)](https://travis-ci.com/inTestiGator/pytest-deltacov)
 [![codecov.io](http://codecov.io/github/inTestiGator/pytest-deltacov/coverage.svg?branch=master)](http://codecov.io/github/inTestiGator/pytest-deltacov?branch=master)
 [![made-with-python](https://img.shields.io/badge/Made%20with-Python-orange.svg)](https://www.python.org/)
