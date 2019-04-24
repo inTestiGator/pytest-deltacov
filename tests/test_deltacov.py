@@ -1,20 +1,9 @@
 """Contains the test cases for deltacov.py"""
 # -*- coding: utf-8 -*-
-import pytest
-
-
-@pytest.fixture
-def simpletestdir(testdir):
-    testdir.makepyfile(
-        test_one="""
-        def test_a():
-            assert True
-        """
-    )
-    yield testdir
 
 
 def test_it_reports_a_header_when_not_set(simpletestdir):
+    """ Test that specifies the use of '--delta coverage report' """
     out = simpletestdir.runpytest()
     assert (
         len([x for x in out.outlines if x.startswith("Using --delta coverage report")])
@@ -23,6 +12,7 @@ def test_it_reports_a_header_when_not_set(simpletestdir):
 
 
 def test_it_reports_a_header_when_set(simpletestdir):
+    """ Test that checks if --delta coverage report is used. """
     out = simpletestdir.runpytest("--delta")
     lines = [x for x in out.outlines if x.startswith("Using --delta coverage report")]
     assert lines == ["Using --delta coverage report"]
