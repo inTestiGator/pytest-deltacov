@@ -1,6 +1,6 @@
 """configuration file for deltacov tests"""
 
-from xml.dom import minidom
+# from xml.dom import minidom
 import subprocess
 import pytest
 import pkg_resources
@@ -33,17 +33,17 @@ def run_subprocess():
     subprocess.run(cmd.split(), capture_output=False, shell=False)
 
 
-def parse_xml_for_coverage():
-    """ Parses the generated xml file """
-    xml_file = minidom.parse("cov.xml")
-    all_lines = xml_file.getElementsByTagName("line")
+#def parse_xml_for_coverage():
+    #""" Parses the generated xml file """
+    #xml_file = minidom.parse("cov.xml")
+    #all_lines = xml_file.getElementsByTagName("line")
 
-    for line in all_lines:
-        if line.attributes["hits"].value == 0:
-            line_number = line.attributes["number"].value
+    #for line in all_lines:
+        #if line.attributes["hits"].value == 0:
+            # line_number = line.attributes["number"].value
             # these are the uncovered lines
-        else:
-            print("100% coverage")
+        #else:
+            #print("100% coverage")
 
 
 def pytest_report_header():
