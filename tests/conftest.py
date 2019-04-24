@@ -62,3 +62,12 @@ def simpletestdir(testdir):
         """
     )
     yield testdir
+
+@pytest.fixture
+def empty_cache(request):
+    """Checks cache for covered and uncovered lines"""
+    cov = request.config.cache.get("output/covered", None)
+    uncov = request.config.cache.get("output/uncovered", None)
+    if cov is None and uncov is None:
+        print("First test execution")
+    return 1
