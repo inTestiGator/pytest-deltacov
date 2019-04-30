@@ -59,6 +59,10 @@ def set_cache(cov_list, uncov_list):
         config.cache.set("output/uncovered", line)
 
 
+def get_last_coverage(config):
+    """Returns the coverage of the last test suit execution"""
+
+    
 def pytest_report_header(config):
     return "Using --delta coverage report"
 
