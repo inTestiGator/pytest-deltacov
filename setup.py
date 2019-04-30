@@ -1,4 +1,4 @@
-"""Filler docstring, UPDATEME"""
+"""Used for deploying"""
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
@@ -6,6 +6,7 @@ import os
 import codecs
 from setuptools import setup
 
+install_requires = ["pygithub", "pytest>=4.4.0", "pytest-cov>=2.6.0"]
 
 def read(fname):
     """Filler docstring, UPDATEME"""
@@ -26,7 +27,7 @@ setup(
     long_description=read('README.rst'),
     py_modules=['pytest_deltacov'],
     python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*',
-    install_requires=['pytest>=3.5.0'],
+    install_requires=install_requires,
     classifiers=[
         'Development Status :: 4 - Beta',
         'Framework :: Pytest',
