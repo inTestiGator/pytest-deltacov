@@ -97,6 +97,8 @@ def notify_user(delta, cov_list, uncov_list):
 
     elif delta == 0:
         print("The coverage has not changed since the last test suite execution.")
+        print("Please be advised that some lines' coverage status may have changed due to changes in code/tests")
 
     else:
         print("The coverage has increased since the last test suite execution.")
+        print("Please be advised that some lines' coverage status may have changed due to changes in code/tests")
