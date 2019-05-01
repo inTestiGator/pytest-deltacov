@@ -15,7 +15,6 @@ codecov = "*"
 [packages]
 pytest-cov = "*"
 black = "*"
-pytest = "*"
 
 [requires]
 python_version = "3.6"
