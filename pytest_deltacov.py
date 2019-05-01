@@ -13,7 +13,7 @@ from pytest import Collector
 __version__= '1.0.0'
 
 dependencies = [
-    'pytest-cov>=2.6.0'
+    'pytest-cov>=2.6.0', 'pytest-cache>=1.0'
 ]
 
 # pytest-cov
@@ -51,18 +51,18 @@ def run_subprocess():
 #             #lines are covered
 
 
-def set_cache(cov_list, uncov_list):
+def set_cache(test_id, total_cov, uncov_list):
     """Caches covered and uncovered lines for use between runs"""
-    for line in cov_list:
-        config.cache.set("output/covered", line)
     for line in uncov_list:
-        config.cache.set("output/uncovered", line)
+        config.cache.set("deltacov/"+ test_id +"_uncovered", line)
+    for cov in total_cov:
+        config.cache.set("deltacov/"+ test_id +"coverage", cov)
 
 
 def get_last_coverage(config):
     """Returns the coverage of the last test suit execution"""
 
-    
+
 def pytest_report_header(config):
     return "Using --delta coverage report"
 
