@@ -13,26 +13,27 @@ the changes in code coverage between test suite executions in a graph. Developed
 using Python, `deltacov` indicates changes in the code that can assist the user
 in achieving maximum code coverage if coverage decreases from one execution of
 the test suite or `deltacov` to another. Deltacov makes use of
-[covplugin](https://pypi.org/project/pytest-cov/) by running the command;
+[covplugin](https://pypi.org/project/pytest-cov/) by running the command:
 `pipenv run pytest -x -s --cov-config pytest.cov --cov-report term-missing --cov`
-to retrieve the code coverage. It also runs the command; `date +"%d-%m-%y"` to
-retrieve the time and date of when the test was ran. Although the user can see
+to retrieve the code coverage. Although the user can see
 these commands executed in the terminal, it is necessary in order to capture the
-information needed to produce the graph. This is accomplished through the use of
-the `script` command which saves the information to a file called `output.txt`.
-Due to potential issues while graphing, `deltacov` only shows the ten most recent
-test execution reports, regardless of the time or date.
+information needed to produce the graph. Once this data has been recorded, the
+plugin then utilizes the [termgraph tool](https://github.com/mkaz/termgraph) to
+display a bar graph within the terminal.
 
 ## Usage of Deltacov
 
-Deltacov has been configured to work with `Python 3.7.2`. Please ensure that the
-local version of Python 3 has been installed by using the command `python3 --version`.
-If the terminal does not display the correct version of Python, please update.
+In order to run `deltacov`, please ensure all requirements are met and use the command
+`pipenv run pytest --delta`. Due to the nature of the plugin, changes involving the
+restructure of a program or the addition of new code may result in false flags as
+coverage is compared on a line by line basis.
 
 ## Requirements
 
-  Include what prerequisites the user will need such as the versions of pytest
-  and python
+Deltacov has been configured to work with `Python 3.7.2`. Please ensure that the
+local version of Python 3 has been installed by using the command `python3 --version`.
+If the terminal does not display the correct version of Python, please update. In
+addition, due to the plugin's reliance on `pytest cov`, this plugin must be installed.
 
 ## Installation
 
