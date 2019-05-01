@@ -6,11 +6,13 @@ from setuptools import setup
 install_requires = ["pygithub", "pytest>=4.4.0", "gitpython", "requests"]
 
 
+
 def read(filename):
     """This function takes in a filepath and reads the file"""
     filepath = os.path.join(os.path.dirname(__file__), filename)
     with io.open(filepath, mode="r", encoding="utf-8") as f:
         return f.read()
+
 
 
 setup(
