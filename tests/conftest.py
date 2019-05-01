@@ -1,13 +1,12 @@
 """Configuration file for the test suite"""
-pytest_plugins = "pytester"
-=======
-"""configuration file for deltacov tests"""
-
 # from xml.dom import minidom
 import subprocess
 import pytest
 import pkg_resources
 from pkg_resources import DistributionNotFound
+
+pytest_plugins = "pytester"
+
 
 __version__ = "1.0.0"
 

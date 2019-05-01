@@ -15,9 +15,10 @@ in achieving maximum code coverage. If coverage decreases between executions of
 test suites or uses of `deltacov`, the user is provided with the graph of changes
 in code coverage and is also provided with the lines that are not covered.
 
-Deltacov utilizes the [covplugin](https://pypi.org/project/pytest-cov/) by running the
-command:`pipenv run pytest -x -s --cov-config pytest.cov --cov-report term-missing --cov`
-to retrieve the code coverage. Although the user can see
+Deltacov utilizes the [covplugin](https://pypi.org/project/pytest-cov/)
+by using the command:
+`pipenv run pytest -x -s --cov-config pytest.cov --cov-report term-missing --cov`
+which retrieves the code coverage. Although the user can see
 these commands executed in the terminal, it is necessary in order to capture the
 information needed to produce the graph. Once this data has been recorded, the
 plugin then utilizes the [termgraph tool](https://github.com/mkaz/termgraph) to
@@ -43,8 +44,10 @@ Installation for pytest-deltacov, as of now, requires the cloning of its reposit
 This requires using the command `git clone git@github.com:inTestiGator/pytest-deltacov.git`
 within the command line interface.
 
-If necessary you may need to install and upgrade `pipenv` using the command: `pip install pipenv --user`
-Next, you must install the dependencies of `pipenv` by running the command: `pipenv install --dev`
+If necessary you may need to install and upgrade `pipenv` using the command:
+`pip install pipenv --user`
+Next, you must install the dependencies of `pipenv` by running the command:
+`pipenv install --dev`
 
 Next, it is required to run the setup of pytest-deltacov, so it compiles
 This requires you to type: `python3 setup.py install`
