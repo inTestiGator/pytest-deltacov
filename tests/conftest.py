@@ -1,7 +1,6 @@
 """Configuration file for the test suite"""
+
 pytest_plugins = "pytester"
-=======
-"""configuration file for deltacov tests"""
 
 # from xml.dom import minidom
 import subprocess
