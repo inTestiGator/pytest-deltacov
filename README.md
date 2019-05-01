@@ -15,8 +15,8 @@ in achieving maximum code coverage. If coverage decreases between executions of
 test suites or uses of `deltacov`, the user is provided with the graph of changes
 in code coverage and is also provided with the lines that are not covered.
 
-Deltacov makes use of [covplugin](https://pypi.org/project/pytest-cov/) by running
-the command:`pipenv run pytest -x -s --cov-config pytest.cov --cov-report term-missing --cov`
+Deltacov utilizes the [covplugin](https://pypi.org/project/pytest-cov/) by running the
+command:`pipenv run pytest -x -s --cov-config pytest.cov --cov-report term-missing --cov`
 to retrieve the code coverage. Although the user can see
 these commands executed in the terminal, it is necessary in order to capture the
 information needed to produce the graph. Once this data has been recorded, the
