@@ -1,12 +1,12 @@
 """Configuration file for the test suite"""
-
-pytest_plugins = "pytester"
-
 # from xml.dom import minidom
 import subprocess
 import pytest
 import pkg_resources
 from pkg_resources import DistributionNotFound
+
+pytest_plugins = "pytester"
+
 
 __version__ = "1.0.0"
 
