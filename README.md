@@ -32,3 +32,25 @@ on upgrading and installing Python can be found [here](https://www.python.org/do
 In addition, due to the plugin's reliance on `pytest cov`, this plugin must be installed
 and at least version 2.6.
 
+If you are unable to install Python on your workstation, you can download
+the [Pyenv](https://github.com/pyenv/pyenv) tool to set up a virtual environment
+for the newest Python version. Further instructions for installing Pyenv can be
+found [here](https://github.com/pyenv/pyenv-installer)
+
+## Installation
+
+Installation for pytest-deltacov, as of now, requires the cloning of its repository.
+This requires using the command `git clone git@github.com:inTestiGator/pytest-deltacov.git`
+within the command line interface.
+
+If necessary you may need to install and upgrade `pipenv` using the command: `pip install pipenv --user`
+Next, you must install the dependencies of `pipenv` by running the command: `pipenv install --dev`
+
+Next, it is required to run the setup of pytest-deltacov, so it compiles
+This requires you to type: `python3 setup.py install`
+
+And finally, to run the plugin use the command `pytest --deltacov`
+
+## Example Output
+
+(Insert a screenshot once plugin is functioning)
