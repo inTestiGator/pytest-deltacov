@@ -79,8 +79,11 @@ def graphing_data():
 def notify_user(delta, cov_list, uncov_list):
     """Shows user what code changes decreased coverage"""
     i=0
+    # list to hold lines that lost coverage
     changed = []
+    # if coverage has decreased
     if delta < 0:
+        # compares lines covered before to lines currently uncovered
         while i < len(cov_list):
             if cov_list[i] in uncov_list:
                 changed.append(cov_list[i])
@@ -89,8 +92,11 @@ def notify_user(delta, cov_list, uncov_list):
                 i++
         print("The following lines are no longer covered in the most recent test suite execution: ")
         while changed[i] is not None:
-            print(changed[i])
+            print(changed[i] + ", ")
+            i++
+
     elif delta == 0:
         print("The coverage has not changed since the last test suite execution.")
+
     else:
         print("The coverage has increased since the last test suite execution.")
