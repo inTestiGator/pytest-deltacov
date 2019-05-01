@@ -32,9 +32,10 @@ on upgrading and installing Python can be found [here](https://www.python.org/do
 In addition, due to the plugin's reliance on `pytest cov`, this plugin must be installed
 and at least version 2.6.
 
-If you are unable to install Python on your workstation, you can download the [Pyenv] () tool
-to set up a virtual environment for the newest Python version. Further instructions for
-install Pyenv can be found [here]()
+If you are unable to install Python on your workstation, you can download
+the [Pyenv](https://github.com/pyenv/pyenv) tool to set up a virtual environment
+for the newest Python version. Further instructions for installing Pyenv can be
+found [here](https://github.com/pyenv/pyenv-installer)
 
 ## Example Output
 
