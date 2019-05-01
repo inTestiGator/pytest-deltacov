@@ -19,7 +19,6 @@ setup(
     description="A pytest plugin that proivdes the user with a graph of changes in code coverage.",
     author="Team deltacov",
     author_email="reibelj@allegheny.edu",
-    url="https://github.com/inTestiGator/pytest-deltacov",
     license="GNU",
     platforms="any",
     install_requires=install_requires,
