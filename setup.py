@@ -25,3 +25,4 @@ setup(
     install_requires=install_requires,
     py_modules=["pytest_deltacov"],
     entry_points={"pytest11": ["deltacov = pytest_deltacov"]},
+)
