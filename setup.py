@@ -6,7 +6,7 @@ import os
 import codecs
 from setuptools import setup
 
-install_requires = ["pygithub", "pytest>=4.4.0", "pytest-cov>=2.6.0"]
+install_requires = ["pytest-cache>=1.0", "pytest>=4.4.0", "pytest-cov>=2.6.0"]
 
 def read(fname):
     """Filler docstring, UPDATEME"""
