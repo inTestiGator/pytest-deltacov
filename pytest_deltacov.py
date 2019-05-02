@@ -75,6 +75,9 @@ def pytest_report_header(config):
 
 def graphing_data():
     """Uses CSV file to create graph of code coverage"""
+    f= open("data/cov.dat","w+")
+    f.write(parse_xml_for_coverage())
+    subprocess.call(["termgraph",  "data/cov.dat"])
 
 
 def notify_user(delta, cov_list, uncov_list):
