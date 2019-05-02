@@ -8,6 +8,7 @@ import argparse
 import pkg_resources
 from pkg_resources import DistributionNotFound, VersionConflict
 from pytest import Collector
+import subprocess
 
 __version__= '1.0.0'
 
