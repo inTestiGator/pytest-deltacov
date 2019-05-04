@@ -30,7 +30,7 @@ def pytest_addoption(parser):
 def run_subprocess():
     """ Runs a subprocess to create the xml file """
     cmd = (
-        "pipenv run pytest -x -s --cov-config pytest.cov --cov-report xml:cov.xml --cov"
+        "pipenv run pytest -x -s --cov-config pytest.cov --cov-report term-missing --cov-report xml --cov"
     )
     subprocess.run(cmd.split(), capture_output=False, shell=False)
 

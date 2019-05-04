@@ -6,6 +6,7 @@ result in decreased coverage
 import pytest
 import argparse
 import pkg_resources
+from xml_parser import xml_parser
 from pkg_resources import DistributionNotFound, VersionConflict
 from pytest import Collector
 
@@ -34,46 +35,34 @@ def pytest_addoption(parser):
 
 def run_subprocess():
     """ Runs a subprocess to create the xml file """
-    cmd = "pipenv run pytest -x -s --cov-config pytest.cov --cov-report xml:cov.xml --cov"
+    cmd = "pipenv run pytest -x -s --cov-config pytest.cov --cov-report term-missing --cov-report xml --cov"
     run.subprocess(cmd.split(), capture_output=False, shell=False)
 
 
-# def parse_xml_for_coverage():
-#     """ Parses the generated xml file """
-#     xml_file = minidom.parse('cov.xml')
-#     all_lines = xml_file.getElementsByTagName('line')
-#
-#     for line in all_lines:
-#         if line.attributes['hits'].value == 0:
-#             line_number = line.attributes['number'].value
-#             #return uncovered lines
-#         else:
-#             #lines are covered
-
 @pytest.fixture
-def empty_cache(request):
-    """Checks cache for covered and uncovered lines"""
-    cov = request.config.cache.get("output/covered", None)
-    uncov = request.config.cache.get("output/uncovered", None)
-    if cov and uncov = None:
-        print("First test execution")
-    return 1
+#def empty_cache(request):
+#    """Checks cache for covered and uncovered lines"""
+#    cov = request.config.cache.get("output/covered", None)
+#    uncov = request.config.cache.get("output/uncovered", None)
+#    if cov and uncov = None:
+#        print("First test execution")
+#    return 1
 
 
-def set_cache(cov_list, uncov_list):
-    """Caches covered and uncovered lines for use between runs"""
-    for line in cov_list:
-        config.cache.set("output/covered", line)
-    for line in uncov_list:
-        config.cache.set("output/uncovered", line)
+#def set_cache(cov_list, uncov_list):
+#    """Caches covered and uncovered lines for use between runs"""
+#    for line in cov_list:
+#        config.cache.set("output/covered", line)
+#    for line in uncov_list:
+#        config.cache.set("output/uncovered", line)
 
 
 def pytest_report_header(config):
     return "Using --delta coverage report"
 
 
-def graphing_data():
-    """Uses CSV file to create graph of code coverage"""
+#def graphing_data():
+#    """Uses CSV file to create graph of code coverage"""
 
 
 def notify_user(delta, cov_list, uncov_list):

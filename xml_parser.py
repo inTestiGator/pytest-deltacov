@@ -2,6 +2,7 @@
     the total coverage along with the lines covered and uncovered for each file tested"""
 
 # pylint: disable=import-error
+import csv
 from bs4 import BeautifulSoup
 
 
@@ -33,9 +34,13 @@ def xml_parser(soup):
         for lines in file.find_all("lines"):
             for line in lines.find_all("line"):
                 if line.get("hits") == "1":
-                    lines_covered.append(line.get("number"))
+                    lines_covered.append(int(line.get("number")))
                 else:
-                    lines_uncovered.append(line.get("number"))
+                    lines_uncovered.append(int(line.get("number")))
+
+    with open('deltacov.csv', 'a+', newline='') as f:
+        writer = csv.writer(f)
+        writer.writerow([filename,line_rate,lines_covered,lines_uncovered])
 
 
 def main():
