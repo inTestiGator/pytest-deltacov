@@ -20,7 +20,7 @@ def xml_parser(soup):
     # Finds the percent coverage for all tested files
     linerate = soup.find("coverage")
     # pylint: disable=unused-variable
-    line_rate = linerate.get("line-rate")  # noqa: F841
+    line_rate = float(linerate.get("line-rate"))  # noqa: F841
 
     # Finds the lines which are covered and uncovered for each tested file
     for file in soup.find_all("class"):
